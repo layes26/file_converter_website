@@ -1,0 +1,251 @@
+# Enhanced Requirements for World-Class Document Processing
+# Install with: pip install -r requirements_worldclass.txt
+
+# Core Flask
+Flask==3.0.0
+flask-cors==4.0.0
+Werkzeug==3.0.1
+
+# ============================================================================
+# WORLD-CLASS TEXT SUMMARIZATION (ChatGPT Pro Level)
+# ============================================================================
+
+# Core NLP libraries
+sumy==0.11.0
+nltk==3.8.1
+
+# Machine learning for advanced summarization
+scikit-learn==1.3.2
+numpy==1.24.3
+
+# Natural language processing
+# Uncomment for production use (adds spaCy for better entity recognition):
+# spacy==3.7.2
+# Run after install: python -m spacy download en_core_web_sm
+
+# ============================================================================
+# PDF PROCESSING (Professional Quality)
+# ============================================================================
+
+# PDF to Word - Best quality conversion
+pdf2docx==0.5.8
+PyMuPDF==1.23.8
+python-docx==1.1.0
+
+# PDF Operations
+PyPDF2==3.0.1
+
+# ============================================================================
+# IMAGE PROCESSING (Maximum Quality)
+# ============================================================================
+
+# Core image processing
+Pillow==10.1.0
+
+# Image to PDF - Lossless conversion
+img2pdf==0.5.0
+
+# Background Removal - AI-powered
+rembg==2.0.54
+
+# For GPU acceleration (optional but recommended for rembg):
+# torch==2.1.0
+# torchvision==0.16.0
+
+# Additional image enhancement
+opencv-python==4.8.1.78
+
+# ============================================================================
+# PROFESSIONAL AUDIO PROCESSING (Multi-Language Support)
+# ============================================================================
+
+# Text to Speech - Professional Quality with Native Accents
+edge-tts==6.1.9  # Microsoft Neural TTS (Best Quality)
+gTTS==2.4.0  # Google TTS (Fallback)
+
+# Speech Recognition - High Accuracy
+SpeechRecognition==3.10.1
+pydub==0.25.1
+
+# Audio enhancement
+noisereduce==3.0.0  # Optional: for noise reduction
+
+# ============================================================================
+# PLAGIARISM DETECTION
+# ============================================================================
+# Already included: scikit-learn, numpy
+
+# ============================================================================
+# WORD TO PDF (Windows Only)
+# ============================================================================
+# For Microsoft Office COM automation
+pywin32==306  # Windows only
+
+# ============================================================================
+# OPTIONAL ENHANCEMENTS FOR PRODUCTION
+# ============================================================================
+
+# Better tokenization and text processing
+# textblob==0.17.1
+
+# Sentiment analysis (for advanced summarization)
+# vaderSentiment==3.3.2
+
+# Better PDF text extraction
+# pdfplumber==0.10.3
+
+# Advanced word processing
+# python-pptx==0.6.23  # For PowerPoint support
+
+# ============================================================================
+# INSTALLATION INSTRUCTIONS
+# ============================================================================
+
+# 1. BASIC INSTALL (All services):
+#    pip install -r requirements_worldclass.txt
+
+# 2. DOWNLOAD NLTK DATA (Required for summarization):
+#    python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords')"
+
+# 3. PROFESSIONAL AUDIO SERVICES:
+#    pip install edge-tts gTTS SpeechRecognition pydub
+#    
+#    Note: edge-tts provides Microsoft Neural voices with native accents
+#          Supports 100+ languages including:
+#          - Bangla (বাংলা) with BD accent
+#          - Urdu (اردو) with PK accent  
+#          - Hindi (हिन्दी) with IN accent
+#          - Arabic (العربية) with native accents
+#          And many more!
+
+# 4. FFMPEG (Required for audio processing):
+#    Windows: Download from https://www.gyan.dev/ffmpeg/builds/
+#    Linux: sudo apt-get install ffmpeg
+#    Mac: brew install ffmpeg
+
+# 5. OPTIONAL - GPU Support for AI features:
+#    pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+
+# 6. OPTIONAL - Advanced NLP (spaCy):
+#    pip install spacy
+#    python -m spacy download en_core_web_sm
+
+# 7. VERIFY INSTALLATION:
+#    python -c "import sumy, sklearn, nltk, edge_tts, speech_recognition; print('✅ All libs installed')"
+
+# ============================================================================
+# SYSTEM DEPENDENCIES (Install separately)
+# ============================================================================
+
+# For voice-to-text and text-to-voice:
+#   - FFmpeg: REQUIRED for audio conversion
+#     Windows: https://www.gyan.dev/ffmpeg/builds/
+#     Linux: sudo apt-get install ffmpeg
+#     Mac: brew install ffmpeg
+
+# For Word to PDF (Windows only):
+#   - Microsoft Office OR LibreOffice
+#     The service uses COM automation to convert via installed Office
+
+# For Word to PDF (Linux/Mac):
+#   - LibreOffice: 
+#     Linux: sudo apt-get install libreoffice
+#     Mac: brew install --cask libreoffice
+
+# ============================================================================
+# PROFESSIONAL AUDIO FEATURES
+# ============================================================================
+
+# Edge TTS (Primary Engine):
+# - Microsoft Neural TTS voices
+# - Native accent support for 100+ languages
+# - Professional voice quality
+# - Emotion and emphasis support
+# - No API key required (free)
+# - Best for: Production deployment
+
+# Google TTS (Fallback):
+# - Good quality voices
+# - Wide language support
+# - Simple integration
+# - Free tier available
+# - Best for: Backup/fallback
+
+# Speech Recognition:
+# - Google Speech Recognition (primary)
+# - Sphinx (offline fallback)
+# - Multiple engine support
+# - High accuracy (95%+ for clear audio)
+# - Multi-language support
+
+# ============================================================================
+# PERFORMANCE NOTES
+# ============================================================================
+
+# For best summarization performance:
+# - Install on SSD for faster file I/O
+# - Minimum 4GB RAM recommended
+# - GPU optional but speeds up AI features (rembg)
+# - Multi-core CPU benefits parallel processing
+
+# For best audio quality:
+# - Use edge-tts for production (best quality)
+# - FFmpeg is essential for format conversion
+# - Clear audio input improves recognition accuracy
+# - Network connection required for cloud TTS/STT
+
+# ============================================================================
+# LANGUAGE SUPPORT
+# ============================================================================
+
+# Voice-to-Text Supported Languages (100+):
+# English, Bangla, Urdu, Hindi, Arabic, Spanish, French, German,
+# Chinese, Japanese, Korean, Russian, Portuguese, Italian, Turkish,
+# Dutch, Polish, Tamil, Telugu, Malayalam, Punjabi, and 80+ more
+
+# Text-to-Voice Native Accent Support:
+# - Bangla (বাংলা): Native Bangladesh accent
+# - Urdu (اردو): Native Pakistan accent
+# - Hindi (हिन्दी): Native Indian accent
+# - Arabic (العربية): Multiple regional accents (Saudi, Egyptian, etc.)
+# - And 100+ other languages with authentic pronunciation
+
+# ============================================================================
+# TROUBLESHOOTING
+# ============================================================================
+
+# If sumy import fails:
+#   pip install --upgrade sumy
+#   python -c "import nltk; nltk.download('punkt')"
+
+# If scikit-learn errors:
+#   pip install --upgrade scikit-learn numpy scipy
+
+# If NLTK data missing:
+#   python -c "import nltk; nltk.download('all')"  # Downloads everything
+
+# If edge-tts fails:
+#   pip install --upgrade edge-tts
+#   Check internet connection (required for TTS)
+
+# If speech recognition fails:
+#   pip install --upgrade SpeechRecognition
+#   Install/configure FFmpeg properly
+#   Check microphone permissions
+#   Verify audio file format is supported
+
+# If FFmpeg not found:
+#   Windows: Add FFmpeg bin folder to PATH
+#   Linux/Mac: Install via package manager
+#   Or place ffmpeg.exe in project folder
+
+# Memory errors with large documents:
+#   - Increase system RAM
+#   - Process in chunks (already implemented)
+#   - Reduce summary_level to 'brief'
+
+# Audio quality issues:
+#   - Use edge-tts instead of gTTS
+#   - Ensure clear input audio for recognition
+#   - Check audio format compatibility
+#   - Verify FFmpeg installation
